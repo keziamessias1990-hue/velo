@@ -5,5 +5,3 @@ test('Webapp deve estar online', async ({ page }) => {
 
   await expect(page).toHaveURL('http://localhost:5173');
 });
-
-
