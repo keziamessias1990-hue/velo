@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-# velo
-Primeiro projeto da turma automatizai
-=======
 # Velô Sprint - Configurador de Veículo Elétrico
 
 Aplicação web em React para configuração e compra do veículo elétrico **Velô Sprint**.
@@ -162,4 +158,3 @@ npm run dev      # Desenvolvimento
 npm run build    # Build de produção
 npm run lint     # Verificar código
 ```
->>>>>>> ccba74b (Criando ratreamento no git)
