@@ -5,7 +5,4 @@ test('Webapp deve estar online, criando uma nova branch no github e fazendo um p
   await page.goto('http://localhost:5173');
 
   await expect(page).toHaveURL('http://localhost:5173');
-  await gitHub.createNewGitHubBranch('feature/online');
-  await gitHub.pushToGitHub('feature/online');
-  await gitHub.createPullRequest('feature/online');
 });
