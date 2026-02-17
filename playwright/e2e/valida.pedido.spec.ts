@@ -23,4 +23,6 @@ test('test', async ({ page }) => {
 
   await page.getByRole('button', { name: 'Buscar Pedido' }).click();
   await page.getByText('APROVADO').click();
+
 });
+
