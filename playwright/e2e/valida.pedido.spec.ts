@@ -47,7 +47,7 @@ test('test', async ({ page }) => {
 
 test('Deve exibir mensagem de erro com pedido incorreto', async ({ page }) => {
 
-  const order = 'generateOrderCode';
+  const order = generateOrderCode();
 
   //Arrange
   await page.goto('http://localhost:5173/');
