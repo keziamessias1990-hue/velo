@@ -30,7 +30,7 @@ export function createCheckoutActions(page: Page) {
       await expect(page.getByTestId('summary-total-price')).toHaveText(price)
     },
 
-    async fillCustomerlData(data: {
+    async fillCustomerData(data: {
       name: string
       lastname: string
       email: string

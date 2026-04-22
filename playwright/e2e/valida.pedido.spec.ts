@@ -3,7 +3,7 @@ import { generateOrderCode } from '../support/helpers'
 import type { OrderDetails } from '../support/actions/orderLookupActions'
 import { insertOrder, deleteOrderByNumber } from '../support/database/orderRepository'
 
-import testData from '../support/fixtures/orders.json' with { type: 'json' }
+import testData from '../support/data/orders.json' with { type: 'json' }
 
 test.describe('Consulta de Pedido', () => {
 

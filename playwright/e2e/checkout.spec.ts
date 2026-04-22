@@ -43,7 +43,7 @@ test.describe('Checkout', () => {
       }
 
       // Arrange
-      await app.checkout.fillCustomerlData(customer)
+      await app.checkout.fillCustomerData(customer)
       await app.checkout.selectStore('Velô Paulista')
       await app.checkout.acceptTerms()
 
@@ -65,7 +65,7 @@ test.describe('Checkout', () => {
       }
 
       // Arrange
-      await app.checkout.fillCustomerlData(customer)
+      await app.checkout.fillCustomerData(customer)
       await app.checkout.selectStore('Velô Paulista')
       await app.checkout.acceptTerms()
 
@@ -87,7 +87,7 @@ test.describe('Checkout', () => {
       }
 
       // Arrange
-      await app.checkout.fillCustomerlData(customer)
+      await app.checkout.fillCustomerData(customer)
       await app.checkout.selectStore('Velô Paulista')
       await app.checkout.acceptTerms()
 
@@ -109,7 +109,7 @@ test.describe('Checkout', () => {
       }
 
       // Arrange
-      await app.checkout.fillCustomerlData(customer)
+      await app.checkout.fillCustomerData(customer)
       await app.checkout.selectStore('Velô Paulista')
 
       await expect(app.checkout.elements.terms).not.toBeChecked()
@@ -147,7 +147,7 @@ test.describe('Checkout', () => {
       await app.configurator.finishConfigurator()
       await app.checkout.expectLoaded()
 
-      await app.checkout.fillCustomerlData(customer)
+      await app.checkout.fillCustomerData(customer)
       await app.checkout.selectStore(customer.store)
 
       // Act
@@ -195,7 +195,7 @@ test.describe('Checkout', () => {
       await app.configurator.finishConfigurator()
       await app.checkout.expectLoaded()
 
-      await app.checkout.fillCustomerlData(customer)
+      await app.checkout.fillCustomerData(customer)
       await app.checkout.selectStore(customer.store)
 
       // Act

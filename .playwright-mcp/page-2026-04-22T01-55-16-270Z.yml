@@ -1,0 +1,63 @@
+- generic [ref=e2]:
+  - region "Notifications (F8)":
+    - list
+  - region "Notifications alt+T"
+  - generic [ref=e3]:
+    - generic [ref=e5]:
+      - heading "Velô Motors" [level=2] [ref=e7]
+      - img "Velô Sprint - midnight-black with aero wheels" [ref=e72]
+    - generic [ref=e12]:
+      - generic [ref=e13]:
+        - generic [ref=e14]:
+          - paragraph [ref=e15]: Configure seu
+          - heading "Velô Sprint" [level=1] [ref=e16]
+        - link "Velô" [ref=e17] [cursor=pointer]:
+          - /url: /
+          - img "Velô" [ref=e18]
+      - generic [ref=e19]:
+        - generic [ref=e20]:
+          - heading "Cor" [level=3] [ref=e21]
+          - generic [ref=e22]:
+            - button "Glacier Blue" [ref=e23] [cursor=pointer]:
+              - generic [ref=e25]: Glacier Blue
+            - button "Midnight Black" [ref=e26] [cursor=pointer]:
+              - generic [ref=e28]: Midnight Black
+            - button "Lunar White" [ref=e29] [cursor=pointer]:
+              - generic [ref=e31]: Lunar White
+        - generic [ref=e32]:
+          - heading "Rodas" [level=3] [ref=e33]
+          - button "Aero Wheels aero Incluso" [ref=e34] [cursor=pointer]:
+            - generic [ref=e35]:
+              - img [ref=e36]
+              - generic [ref=e38]:
+                - paragraph [ref=e39]: Aero Wheels
+                - paragraph [ref=e40]: aero
+            - generic [ref=e41]: Incluso
+          - button "Sport Wheels sport + R$ 2.000,00" [ref=e42] [cursor=pointer]:
+            - generic [ref=e43]:
+              - img [ref=e44]
+              - generic [ref=e46]:
+                - paragraph [ref=e47]: Sport Wheels
+                - paragraph [ref=e48]: sport
+            - generic [ref=e49]: + R$ 2.000,00
+        - generic [ref=e50]:
+          - heading "Opcionais" [level=3] [ref=e51]
+          - generic [ref=e52] [cursor=pointer]:
+            - checkbox "Precision Park + R$ 5.500,00 Sistema avançado de estacionamento totalmente autônomo, capaz de identificar vagas e realizar manobras com precisão e segurança." [ref=e53]
+            - generic [ref=e54]:
+              - generic [ref=e55]:
+                - generic [ref=e56]: Precision Park
+                - generic [ref=e57]: + R$ 5.500,00
+              - paragraph [ref=e58]: Sistema avançado de estacionamento totalmente autônomo, capaz de identificar vagas e realizar manobras com precisão e segurança.
+          - generic [ref=e59] [cursor=pointer]:
+            - checkbox "Flux Capacitor + R$ 5.000,00 Estação de recarga doméstica de alta performance, projetada para oferecer carregamento ultra-rápido, eficiente e seguro." [active] [ref=e60]
+            - generic [ref=e61]:
+              - generic [ref=e62]:
+                - generic [ref=e63]: Flux Capacitor
+                - generic [ref=e64]: + R$ 5.000,00
+              - paragraph [ref=e65]: Estação de recarga doméstica de alta performance, projetada para oferecer carregamento ultra-rápido, eficiente e seguro.
+      - generic [ref=e66]:
+        - generic [ref=e67]:
+          - generic [ref=e68]: Preço de Venda
+          - generic [ref=e69]: R$ 40.000,00
+        - button "Monte o Seu" [ref=e70] [cursor=pointer]
