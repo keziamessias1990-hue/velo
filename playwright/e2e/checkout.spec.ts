@@ -1,6 +1,57 @@
 import { test, expect } from '../support/fixtures'
 
-import { deleteOrderByEmail } from '../support/database/orderRepository'
+type CreateOrderPayload = {
+  order_number: string
+  color: string
+  wheel_type: string
+  optionals: string[] | null
+  customer_name: string
+  customer_email: string
+  customer_phone: string
+  customer_cpf: string
+  payment_method: 'avista' | 'financiamento'
+  total_price: number
+  status: 'APROVADO' | 'REPROVADO' | 'EM_ANALISE'
+  created_at: string
+  updated_at: string
+  id: string
+}
+
+async function mockOrderCreation(page: import('@playwright/test').Page, overrides: Partial<CreateOrderPayload> = {}) {
+  await page.route('**/rest/v1/orders*', async route => {
+    if (route.request().method() !== 'POST') {
+      await route.fallback()
+      return
+    }
+
+    const now = new Date().toISOString()
+    const payload = route.request().postDataJSON() as Record<string, unknown>
+
+    const body: CreateOrderPayload = {
+      id: 'mock-order-id',
+      order_number: 'VLO-MOCK01',
+      color: String(payload.color ?? 'glacier-blue'),
+      wheel_type: String(payload.wheel_type ?? 'aero'),
+      optionals: (payload.optionals as string[] | null) ?? [],
+      customer_name: String(payload.customer_name ?? 'Cliente Teste'),
+      customer_email: String(payload.customer_email ?? 'cliente@teste.com'),
+      customer_phone: String(payload.customer_phone ?? '(11) 99999-9999'),
+      customer_cpf: String(payload.customer_cpf ?? '000.000.000-00'),
+      payment_method: (payload.payment_method as 'avista' | 'financiamento') ?? 'avista',
+      total_price: Number(payload.total_price ?? 40000),
+      status: (payload.status as 'APROVADO' | 'REPROVADO' | 'EM_ANALISE') ?? 'APROVADO',
+      created_at: now,
+      updated_at: now,
+      ...overrides,
+    }
+
+    await route.fulfill({
+      status: 201,
+      contentType: 'application/json',
+      body: JSON.stringify(body),
+    })
+  })
+}
 
 test.describe('Checkout', () => {
 
@@ -59,7 +110,7 @@ test.describe('Checkout', () => {
       const customer = {
         name: 'Fernando',
         lastname: 'Papito',
-        email: 'papito@.com',
+        email: '',
         document: '00000014141',
         phone: '(11) 99999-9999'
       }
@@ -82,7 +133,7 @@ test.describe('Checkout', () => {
         name: 'Fernando',
         lastname: 'Papito',
         email: 'papito@test.com',
-        document: '00000014199',
+        document: '',
         phone: '(11) 99999-9999'
       }
 
@@ -137,7 +188,10 @@ test.describe('Checkout', () => {
         totalPrice: 'R$ 40.000,00'
       }
 
-      await deleteOrderByEmail(customer.email)
+      await mockOrderCreation(page, {
+        customer_email: customer.email,
+        status: 'APROVADO',
+      })
 
       // Arrange
       await page.goto('/')
@@ -174,7 +228,11 @@ test.describe('Checkout', () => {
         totalPrice: 'R$ 40.000,00'
       }
 
-      await deleteOrderByEmail(customer.email)
+      await mockOrderCreation(page, {
+        customer_email: customer.email,
+        payment_method: 'financiamento',
+        status: 'APROVADO',
+      })
 
       await page.route('**/functions/v1/credit-analysis', async route => {
         await route.fulfill({

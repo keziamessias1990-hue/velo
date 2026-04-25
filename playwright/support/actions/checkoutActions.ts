@@ -5,13 +5,13 @@ export function createCheckoutActions(page: Page) {
   const terms = page.getByTestId('checkout-terms')
 
   const alerts = {
-    name: page.getByTestId('error-name'),
-    lastname: page.getByTestId('error-lastname'),
-    email: page.getByTestId('error-email'),
-    phone: page.getByTestId('error-phone'),
-    document: page.getByTestId('error-document'),
-    store: page.getByTestId('error-store'),
-    terms: page.getByTestId('error-terms')
+    name: page.getByText('Nome deve ter pelo menos 2 caracteres', { exact: true }),
+    lastname: page.getByText('Sobrenome deve ter pelo menos 2 caracteres', { exact: true }),
+    email: page.getByText('Email inválido', { exact: true }),
+    phone: page.getByText('Telefone inválido', { exact: true }),
+    document: page.getByText('CPF inválido', { exact: true }),
+    store: page.getByText('Selecione uma loja', { exact: true }).last(),
+    terms: page.getByText('Aceite os termos', { exact: true })
   }
 
 
@@ -38,10 +38,10 @@ export function createCheckoutActions(page: Page) {
       document: string
     }) {
       await page.getByTestId('checkout-name').fill(data.name)
-      await page.getByTestId('checkout-lastname').fill(data.lastname)
+      await page.getByTestId('checkout-surname').fill(data.lastname)
       await page.getByTestId('checkout-email').fill(data.email)
       await page.getByTestId('checkout-phone').fill(data.phone)
-      await page.getByTestId('checkout-document').fill(data.document)
+      await page.getByTestId('checkout-cpf').fill(data.document)
     },
 
     async selectStore(storeName: string) {
