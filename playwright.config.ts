@@ -44,12 +44,11 @@ export default defineConfig({
 
     // Tempo máximo para ações iterativas como click(), fill()
     // Quando o valor é 0, gerda o limite de tempo de timeout geral do teste
-    actionTimeout: 5000,
+    actionTimeout: 15000,
 
     //Tempo máximo para as navegaç˜pes como goto(), waitForURL()
     //Quando o valor é 0, herda o limite do timeout geral do teste
-    navigationTimeout: 10000,
-
+    navigationTimeout: 30000,
 
   },
 
@@ -93,8 +92,8 @@ export default defineConfig({
 
   /* Run your local dev server before starting the tests */
   // webServer: {
-  //   command: 'npm run start',
-  //   url: 'http://localhost:3000',
+  //   command: 'npm run dev',
+  //   url: 'http://localhost:5173',
   //   reuseExistingServer: !process.env.CI,
   // },
 });

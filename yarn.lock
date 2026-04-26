@@ -836,55 +836,67 @@
   resolved "https://registry.npmjs.org/@rollup/rollup-darwin-arm64/-/rollup-darwin-arm64-4.55.2.tgz"
   integrity sha512-UCbaTklREjrc5U47ypLulAgg4njaqfOVLU18VrCrI+6E5MQjuG0lSWaqLlAJwsD7NpFV249XgB0Bi37Zh5Sz4g==
 
-"@supabase/auth-js@2.91.0":
-  version "2.91.0"
-  resolved "https://registry.npmjs.org/@supabase/auth-js/-/auth-js-2.91.0.tgz"
-  integrity sha512-9ywvsKLsxTwv7fvN5fXzP3UfRreqrX2waylTBDu0lkmeHXa8WtSQS9e0WV9FBduiazYqQbgfBQXBNPRPsRgWOQ==
+"@supabase/auth-js@2.104.1":
+  version "2.104.1"
+  resolved "https://registry.npmjs.org/@supabase/auth-js/-/auth-js-2.104.1.tgz"
+  integrity sha512-pqFnDKekq1isqlqnzqzyJ3mzmho+o+FjfVTqhKY3PFlwj2anx3OPznO1kbo1ZEwD8zg1r4EAFf/7pplLyX0ocQ==
   dependencies:
     tslib "2.8.1"
 
-"@supabase/functions-js@2.91.0":
-  version "2.91.0"
-  resolved "https://registry.npmjs.org/@supabase/functions-js/-/functions-js-2.91.0.tgz"
-  integrity sha512-WaakXOqLK1mLtBNFXp5o5T+LlI6KZuADSeXz+9ofPRG5OpVSvW148LVJB1DRZ16Phck1a0YqIUswOUgxCz6vMw==
+"@supabase/functions-js@2.104.1":
+  version "2.104.1"
+  resolved "https://registry.npmjs.org/@supabase/functions-js/-/functions-js-2.104.1.tgz"
+  integrity sha512-JjAH4JN9rZzxh4plQnILPrQZXAG6ccoRS6z9hQAGmXpRSwJA+7CWbsDV2R82I8MROlGDsjqj1Ot/cWpTfdf6xg==
   dependencies:
     tslib "2.8.1"
 
-"@supabase/postgrest-js@2.91.0":
-  version "2.91.0"
-  resolved "https://registry.npmjs.org/@supabase/postgrest-js/-/postgrest-js-2.91.0.tgz"
-  integrity sha512-5S41zv2euNpGucvtM4Wy+xOmLznqt/XO+Lh823LOFEQ00ov7QJfvqb6VzIxufvzhooZpmGR0BxvMcJtWxCIFdQ==
+"@supabase/phoenix@^0.4.0":
+  version "0.4.0"
+  resolved "https://registry.npmjs.org/@supabase/phoenix/-/phoenix-0.4.0.tgz"
+  integrity sha512-RHSx8bHS02xwfHdAbX5Lpbo6PXbgyf7lTaXTlwtFDPwOIw64NnVRwFAXGojHhjtVYI+PEPNSWwkL90f4agN3bw==
+
+"@supabase/postgrest-js@2.104.1":
+  version "2.104.1"
+  resolved "https://registry.npmjs.org/@supabase/postgrest-js/-/postgrest-js-2.104.1.tgz"
+  integrity sha512-RqlLpvgXsjcc27fLyHNGm3zN0KDWXbkdTdaFtaEdX83RsTEqH7BAmshH7zoUMml5lL04naUeRjS3B81O6jZcJw==
   dependencies:
     tslib "2.8.1"
 
-"@supabase/realtime-js@2.91.0":
-  version "2.91.0"
-  resolved "https://registry.npmjs.org/@supabase/realtime-js/-/realtime-js-2.91.0.tgz"
-  integrity sha512-u2YuJFG35umw8DO9beC27L/jYXm3KhF+73WQwbynMpV0tXsFIA0DOGRM0NgRyy03hJIdO6mxTTwe8efW3yx3Tg==
+"@supabase/realtime-js@2.104.1":
+  version "2.104.1"
+  resolved "https://registry.npmjs.org/@supabase/realtime-js/-/realtime-js-2.104.1.tgz"
+  integrity sha512-dVJHhFB2ErBd0/2qE9G8CedCrGoAtBfL9Q4zbSMXO7b1Cpld916ljSiX21mURUqijPf1WoPQG4Bp/averUzk/g==
   dependencies:
-    "@types/phoenix" "^1.6.6"
+    "@supabase/phoenix" "^0.4.0"
     "@types/ws" "^8.18.1"
     tslib "2.8.1"
     ws "^8.18.2"
 
-"@supabase/storage-js@2.91.0":
-  version "2.91.0"
-  resolved "https://registry.npmjs.org/@supabase/storage-js/-/storage-js-2.91.0.tgz"
-  integrity sha512-CI7fsVIBQHfNObqU9kmyQ1GWr+Ug44y4rSpvxT4LdQB9tlhg1NTBov6z7Dlmt8d6lGi/8a9lf/epCDxyWI792g==
+"@supabase/ssr@^0.10.2":
+  version "0.10.2"
+  resolved "https://registry.npmjs.org/@supabase/ssr/-/ssr-0.10.2.tgz"
+  integrity sha512-JFbchN63CXLFHJRNT7udec4/RoD9PmXkSGko3QSO6vUuqGBtSzdmxR7FPfQNr7SuFd65I7Xv46q66ALjEN1cgQ==
+  dependencies:
+    cookie "^1.0.2"
+
+"@supabase/storage-js@2.104.1":
+  version "2.104.1"
+  resolved "https://registry.npmjs.org/@supabase/storage-js/-/storage-js-2.104.1.tgz"
+  integrity sha512-2bQaLbkRshctkUVuqamwYZDEd+0cGSc9DY9sjh92DcA5hu1F/1AP8p6gxGr76sgdK9Ngi0rh+2Kdh+uC4hcnGA==
   dependencies:
     iceberg-js "^0.8.1"
     tslib "2.8.1"
 
-"@supabase/supabase-js@^2.89.0":
-  version "2.91.0"
-  resolved "https://registry.npmjs.org/@supabase/supabase-js/-/supabase-js-2.91.0.tgz"
-  integrity sha512-Rjb0QqkKrmXMVwUOdEqysPBZ0ZDZakeptTkUa6k2d8r3strBdbWVDqjOdkCjAmvvZMtXecBeyTyMEXD1Zzjfvg==
+"@supabase/supabase-js@^2.102.1", "@supabase/supabase-js@^2.104.1":
+  version "2.104.1"
+  resolved "https://registry.npmjs.org/@supabase/supabase-js/-/supabase-js-2.104.1.tgz"
+  integrity sha512-E0H/CtVmaGjiAy+ieZ5ZB/1EqxXcGdaFaAc23AE5zaYfz6NtCNDcmaEdoGPYMPFH5pE6drGG6e3ljPmkFoGVxQ==
   dependencies:
-    "@supabase/auth-js" "2.91.0"
-    "@supabase/functions-js" "2.91.0"
-    "@supabase/postgrest-js" "2.91.0"
-    "@supabase/realtime-js" "2.91.0"
-    "@supabase/storage-js" "2.91.0"
+    "@supabase/auth-js" "2.104.1"
+    "@supabase/functions-js" "2.104.1"
+    "@supabase/postgrest-js" "2.104.1"
+    "@supabase/realtime-js" "2.104.1"
+    "@supabase/storage-js" "2.104.1"
 
 "@swc/core-darwin-arm64@1.15.10":
   version "1.15.10"
@@ -1017,11 +1029,6 @@
     "@types/node" "*"
     pg-protocol "*"
     pg-types "^2.2.0"
-
-"@types/phoenix@^1.6.6":
-  version "1.6.7"
-  resolved "https://registry.npmjs.org/@types/phoenix/-/phoenix-1.6.7.tgz"
-  integrity sha512-oN9ive//QSBkf19rfDv45M7eZPi0eEXylht2OLEXicu5b4KoQ1OzXIw+xDSGWxSxe1JmepRR/ZH283vsu518/Q==
 
 "@types/prop-types@*":
   version "15.7.15"
@@ -1382,6 +1389,11 @@ concat-map@0.0.1:
   version "0.0.1"
   resolved "https://registry.npmjs.org/concat-map/-/concat-map-0.0.1.tgz"
   integrity sha512-/Srv4dswyQNBfohGpz9o6Yb3Gz3SrUDqBH5rTuhGR7ahtlbYKnVxw2bCFMRljaA7EXHaXZ8wsHdodFvbkhKmqg==
+
+cookie@^1.0.2:
+  version "1.1.1"
+  resolved "https://registry.npmjs.org/cookie/-/cookie-1.1.1.tgz"
+  integrity sha512-ei8Aos7ja0weRpFzJnEA9UHJ/7XQmqglbRwnf2ATjcB9Wq874VKH9kfjjirM6UhU2/E5fFYadylyhFldcqSidQ==
 
 cross-spawn@^7.0.6:
   version "7.0.6"
@@ -2940,9 +2952,9 @@ write-file-atomic@^7.0.0:
     signal-exit "^4.0.1"
 
 ws@^8.18.2:
-  version "8.19.0"
-  resolved "https://registry.npmjs.org/ws/-/ws-8.19.0.tgz"
-  integrity sha512-blAT2mjOEIi0ZzruJfIhb3nps74PRWTCz1IjglWEEpQl5XS/UNama6u2/rjFkDDouqr4L67ry+1aGIALViWjDg==
+  version "8.20.0"
+  resolved "https://registry.npmjs.org/ws/-/ws-8.20.0.tgz"
+  integrity sha512-sAt8BhgNbzCtgGbt2OxmpuryO63ZoDk/sqaB/znQm94T4fCEsy/yV+7CdC1kJhOU9lboAEU7R3kquuycDoibVA==
 
 xtend@^4.0.0:
   version "4.0.2"
