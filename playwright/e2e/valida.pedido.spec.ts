@@ -11,13 +11,6 @@ test.describe('Consulta de Pedido', () => {
     await app.orderLookup.open()
   })
 
-  test.beforeEach(async () => {
-    for (const orderNumber of createdOrders) {
-      await deleteOrderByNumber(orderNumber)
-    }
-    createdOrders = []
-  })
-
   test('deve consultar um pedido aprovado', async ({ app }) => {
     const code = generateOrderCode()
     createdOrders.push(code)
@@ -112,7 +105,7 @@ test.describe('Consulta de Pedido', () => {
         document: '780.228.290-05',
         phone: '(11) 99999-9999'
       },
-      payment: 'À Vista',
+      payment: 'Financiamento',
       total_price: '40000'
     }
 
@@ -125,7 +118,7 @@ test.describe('Consulta de Pedido', () => {
       customer_email: order.customer.email,
       customer_phone: order.customer.phone!,
       customer_cpf: order.customer.document!,
-      payment_method: 'avista',
+      payment_method: 'Financiamento',
       total_price: '40000',
       status: order.status,
       created_at: new Date().toISOString(),
